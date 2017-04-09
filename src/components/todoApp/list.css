@@ -1,0 +1,9 @@
+.remove {
+    color: red;
+    font-style: italic;
+}
+
+.todo {
+    font-size: 20px;
+    letter-spacing: 1px;
+}

@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { Selection } from '../../components/dummyText/Selection'
 import { fetchText } from '../../actions/textActions'
 
-
-
 class TextGenerate extends Component {
     constructor(props){
         super(props);

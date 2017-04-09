@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Text } from '../../components/translate/Text'
-
+import './translation.css'
 
 class ShowTranslate extends Component{
      render(){

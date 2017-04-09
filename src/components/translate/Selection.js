@@ -8,7 +8,7 @@ export  const  Selection  =  ({ onTranslate, onSelect, onChange }) => {
     return (
         <form onSubmit={ handleSubmit} id="form1">
             <div className="form-group">
-             <label htmlFor="language">language</label>
+             <label htmlFor="language">Translate to </label>
              <select onChange={ onSelect } >
                 <option value="es">spanish</option>
                 <option value="ru">russian</option>

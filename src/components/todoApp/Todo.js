@@ -1,13 +1,13 @@
 import React from 'react';
 
 export const Todo = ({ onToggle,onRemove, completed, text }) => (
-    <span>
+    <span className="todo">
         <li onClick={onToggle} 
             style={{
             textDecoration: completed ? 'line-through' : 'none'
             }}>
             {text} 
         </li>
-        <span onClick={onRemove} > X </span>
+        <span onClick={onRemove} className="remove" > X </span>
     </span>
 )

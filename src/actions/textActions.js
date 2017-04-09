@@ -19,5 +19,6 @@ export function fetchText(selection) {
     return fetch(`https://www.randomtext.me/api/gibberish/${format}-${elements}/20-40`)
       .then(response => response.json())
       .then(json => dispatch(receiveText(json)))
+      .catch((err) => console.log(err) )
   }
 }
