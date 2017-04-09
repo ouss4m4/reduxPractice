@@ -20,7 +20,7 @@ import { addTodo } from '../../actions/todoActions';
       <div className='form-group'>
         <input ref={node => {
           input = node
-        }} />
+        }} placeholder="waa ? "/>
         <input type="submit" value="ADD TODO" />
         </div>
       </form>

@@ -21,5 +21,6 @@ export function fetchTranslation(selection) {
     return fetch(`${url}key=${key}&lang=en-${language}&text=${text}`)
       .then(response => response.json())
       .then(json => dispatch(receiveTranslation(json)))
+      .catch( (err) => console.log(err))
   }
 }
