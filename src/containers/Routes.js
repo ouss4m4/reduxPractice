@@ -5,6 +5,8 @@ import DummyText from './dummyText/DummyText'
 import Translate from './translate/Translate'
 import { Home } from './home/Home'
 import TodoApp from './todoApp/TodoApp'
+import {NewsApp} from './newsApp/Layout.js'
+import ShowArticles from './newsApp/ShowArticles'
 
 export const Routes = () => (
     <Router >
@@ -19,6 +21,7 @@ export const Routes = () => (
                         <li> <Link  to="/text"> Random Text </Link> </li>
                         <li> <Link  to="/translate"> Translator </Link> </li>
                         <li> <Link  to="/todos/all"> Todos </Link> </li>
+                        <li> <Link  to="/news" > News </Link> </li>
                     </ul>
                 </div>
             </div>
@@ -27,6 +30,8 @@ export const Routes = () => (
                 <Route path="/text"  component={DummyText} />
                 <Route path="/translate" component={Translate} />
                 <Route path="/todos/:filter" component={TodoApp} />
+                <Route path="/news" exact component={NewsApp} />
+                <Route path="/news/:channel" component={ShowArticles} />
                 <Route render={ ({ location }) => (<h3>No match for <code>{location.pathname}</code></h3>) } />
             </Switch>
         </div>

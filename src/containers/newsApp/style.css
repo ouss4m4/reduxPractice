@@ -1,0 +1,28 @@
+.source-grid {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap
+}
+
+.source-single {
+   margin: 10px 0;
+   width : 30%;
+}
+
+.articles-grid {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.articles-single {
+    width: 80%;
+    height: 100%;
+    margin: 10px 0;
+}
+
+.image {
+    display: block;
+    max-width: 95%;
+    max-height: 80%;
+}
