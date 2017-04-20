@@ -4,7 +4,7 @@ import ShowSources from'./ShowSources'
 import './style.css'
 
 export const NewsApp = () => (
-        <div>
+        <div className='container'>
             <SelectSources />    
             <ShowSources />
         </div>
