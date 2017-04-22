@@ -7,6 +7,8 @@ import { Home } from './home/Home'
 import TodoApp from './todoApp/TodoApp'
 import {NewsApp} from './newsApp/Layout.js'
 import ShowArticles from './newsApp/ShowArticles'
+import GithubMain from './github/GithubMain.js'
+import {UserProfile} from './github/UserProfile'
 
 export const Routes = () => (
     <Router >
@@ -22,6 +24,7 @@ export const Routes = () => (
                         <li> <Link  to="/translate"> Translator </Link> </li>
                         <li> <Link  to="/todos/all"> Todos </Link> </li>
                         <li> <Link  to="/news" > News </Link> </li>
+                        <li> <Link to="github"> Github </Link></li>
                     </ul>
                 </div>
             </div>
@@ -32,6 +35,8 @@ export const Routes = () => (
                 <Route path="/todos/:filter" component={TodoApp} />
                 <Route path="/news" exact component={NewsApp} />
                 <Route path="/news/:channel" component={ShowArticles} />
+                <Route path="/github" exact component={GithubMain} />
+                <Route path="/github/:user" component={UserProfile} />
                 <Route render={ ({ location }) => (<h3>No match for <code>{location.pathname}</code></h3>) } />
             </Switch>
         </div>
