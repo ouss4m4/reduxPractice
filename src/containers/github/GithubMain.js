@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {UserInput} from '../../components/github/UserInput'
-import {UserProfile} from './UserProfile'
+import {UserProfile} from '../../components/github/UserProfile'
 import {connect} from 'react-redux'
 import {fetchUser} from '../../actions/githubActions'
 
@@ -21,11 +21,12 @@ class GithubMain extends Component {
         })
     }
     render(){
-        const {isFetching,fetched} = this.props.user
+        const {isFetching,fetched,user} = this.props.user
         return(
              <div className='container'>
                <UserInput onSubmit={this.handleSubmit} onChange={this.handleChange}/>
-               {isFetching ? 'loading user' : !fetched ? 'enter a user to look for ' : <UserProfile user={this.props.user.user}/>}
+               {isFetching ? 'loading user' : !fetched ? 'enter a user to look for ' : user.message ? 'user not found bro' :
+                <UserProfile user={user} onRepoClick={()=> this.props.dispatch()}/>}
             </div>
         )
     }
