@@ -7,9 +7,7 @@ class ShowText extends Component{
      render(){
         const { isFetching, fetched} = this.props.text;
         if (isFetching) {
-            return (<div className="body">
-                        <Text text={'loading text'}/>
-                    </div>)
+            return (<i className="fa fa-spinner fa-spin" aria-hidden="true"></i>)
         }
         if (fetched) {
             return (<div className="body">

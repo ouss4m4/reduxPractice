@@ -8,9 +8,7 @@ class ShowTranslate extends Component{
         const { isFetching, fetched} = this.props.translate;
         
             if (isFetching) {
-                return (
-                    <Text text={'Translating ...'}/>
-                )
+                return (<i className="fa fa-spinner fa-spin" aria-hidden="true"></i> )
             }
             if (fetched) {
                 return (<div className='container'>

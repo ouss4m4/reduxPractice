@@ -9,7 +9,7 @@ class ShowSources extends Component{
         const { Channels, getArticles } = this.props
         const renderChannels = () => {
             if (Channels.isFetching){
-                return <p> loading </p>
+                return <i className="fa fa-spinner fa-spin" aria-hidden="true"></i>
             }
             if (Channels.fetched) {
                 if (Channels.data.status ==='ok') {
