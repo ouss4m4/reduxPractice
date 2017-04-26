@@ -21,7 +21,7 @@ import { addTodo } from '../../actions/todoActions';
         <input ref={node => {
           input = node
         }} placeholder="waa ? "/>
-        <input type="submit" value="ADD TODO" />
+        <input type="submit" value="ADD TODO" className='btn-primary' />
         </div>
       </form>
     </div>

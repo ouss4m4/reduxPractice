@@ -13,7 +13,7 @@ class ShowArticles extends Component {
         const {Topics} = this.props
         return(<div>
             <h1> articles from {channel} </h1>
-            {!Topics.fetched ? 'loading ...' : <ArticleShow articles={Topics.data.articles} /> }
+            {!Topics.fetched ? <i className="fa fa-spinner fa-spin" aria-hidden="true"></i> : <ArticleShow articles={Topics.data.articles} /> }
             </div>)
     }
 }

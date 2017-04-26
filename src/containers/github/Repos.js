@@ -11,7 +11,7 @@ class Repos extends Component{
     render(){
         const {isFetching, fetched, repos} = this.props.Repos
         return(<div>
-            {isFetching ? 'loading...' : !fetched ? 'oops' : repos.message ? 'notfound ': <UserRepos  reposit={repos}/> }
+            {isFetching ? <i className="fa fa-spinner fa-spin" aria-hidden="true"></i> : !fetched ? 'oops' : repos.message ? 'notfound ': <UserRepos  reposit={repos}/> }
         </div>)
     }
 }

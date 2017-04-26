@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import DummyText from './dummyText/DummyText'
 import Translate from './translate/Translate'
@@ -9,25 +9,11 @@ import {NewsApp} from './newsApp/Layout.js'
 import ShowArticles from './newsApp/ShowArticles'
 import GithubMain from './github/GithubMain.js'
 import Repos from './github/Repos'
-
+import {Navigation} from './Navigation'
 export const Routes = () => (
     <Router >
         <div>
-            <div className='navbar navbar-default'>
-                <div className='container'>
-                    <div className='navbar-header'>
-                        <Link className='navbar-brand' to="/"> REACT &hearts; </Link>
-                    </div>
-                    <ul className="nav navbar-nav">
-                        <li> <Link to="/"> Home </Link> </li>
-                        <li> <Link to="/text"> Random Text </Link> </li>
-                        <li> <Link to="/translate"> Translator </Link> </li>
-                        <li> <Link to="/todos/all"> Todos </Link> </li>
-                        <li> <Link to="/news" > News </Link> </li>
-                        <li> <Link to="/github"> Github </Link></li>
-                    </ul>
-                </div>
-            </div>
+            <Navigation />
             <Switch> 
                 <Route path="/" exact component={Home}/>
                 <Route path="/text"  component={DummyText} />

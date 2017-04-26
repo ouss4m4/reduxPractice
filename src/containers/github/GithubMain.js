@@ -25,7 +25,7 @@ class GithubMain extends Component {
         return(
              <div className='container'>
                <UserInput onSubmit={this.handleSubmit} onChange={this.handleChange}/>
-               {isFetching ? 'loading user' : !fetched ? 'enter a user to look for ' : user.message ? 'user not found bro' :
+               {isFetching ? <i className="fa fa-spinner fa-spin" aria-hidden="true"></i> : !fetched ? 'enter a user to look for ' : user.message ? 'user not found bro' :
                 <UserProfile user={user} onRepoClick={()=> this.props.dispatch()}/>}
             </div>
         )
